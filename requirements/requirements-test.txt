@@ -1,11 +1,36 @@
+# --- Base dependencies (imported from a common file) ---
 -r common.txt
-pytest-cov==2.8.1
+
+
+# --- Test Runner Framework ---
+# Pytest is the primary testing framework.
 pytest==5.4.1
+# 'sure' provides a highly readable, BDD-style assertion library.
 sure==1.4.11
+
+
+# --- Test Coverage and Mocks ---
+# Pytest-cov integrates coverage measurement directly into pytest runs.
+pytest-cov==2.8.1
+# Responses is used to mock HTTP requests for external API calls during testing.
 responses==0.10.12
-pytest-pep8==1.0.6
+
+
+# --- Code Quality and Formatting ---
+# Black is a strict, uncompromised Python code formatter.
 black
+# Flake8 performs static analysis for PEP 8 compliance and other common errors.
 flake8
+# Note: pytest-pep8 has been removed as Flake8 provides superior linting capabilities.
+
+
+# --- Environment Automation and CI ---
+# Tox automates testing and building across multiple Python environments/versions.
 tox
+# Tox-pyenv integrates Tox with pyenv for environment management.
 tox-pyenv
+
+
+# --- Distribution and Packaging ---
+# Wheel is required for building wheel archives (.whl) for distribution.
 wheel
